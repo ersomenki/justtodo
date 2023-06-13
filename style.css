@@ -40,14 +40,34 @@ h2 {
 }
 
 input {
-    flex: 1;
+    /* flex: 1; */
+    width: 450px;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px 15px;
     font-size: 15px;
 }
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
 
+.text {
+    cursor: pointer;
+}
+
+.add {
+    width: 120px;
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background:#d6b210;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 25px;
+    cursor: pointer;
+}
 button {
     border: none;
     outline: none;
@@ -59,53 +79,12 @@ button {
     cursor: pointer;
 }
 
-ul li {
-    position: relative;
-    list-style: none;
-    font-size: 17px;
-    padding: 15px 15px 15px 55px;
-    user-select: none;
-    cursor:pointer;
-    min-height: 20px;
-}
-
-ul li::before {
-    content: "";
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(icons/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 15px;
-}
-
-ul li.checked {
-    color: #555;
-    text-decoration: line-through;
-}
-
-ul li.checked::before {
-    background-image: url(icons/checked.png);
-}
-
-ul li span {
-    position: absolute;
-    right: 13px;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 22px;
-    color: #555;
-    line-height: 40px;
-    text-align: center;
-}
-
-ul li span:hover {
-    background: #edeef0;
+.tasks .task {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 15px;
 }
 
 .alert {
@@ -144,4 +123,42 @@ ul li span:hover {
 }
 .remove {
     margin-left: 1px;
+}
+.edit {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    color: #555;
+}
+.edit:hover {
+    background: #edeef0;
+}
+.remove {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px 5px;
+    color:#555;
+    background: #fff;
+
+}
+.remove:hover {
+    background: #edeef0;
+}
+.favorite {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    padding: 5px 5px;
+    font-size: 15px;
+    color: #555;
+}
+.favorite:hover {
+    background: #edeef0;
+}
+
+.active {
+    color: #FFD829;
 }
