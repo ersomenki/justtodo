@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0.25turn, #2E9AFF, #FFD829);
+}
+
+.todo {
+    width: 640px;
+    min-height: 120px;
+    background:#fff;
+    border-radius: 70px;
+    margin: 100px auto;
+    padding-bottom: 30px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 25px;
+    margin: 10px 10px;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 12px;
+    background: linear-gradient(25deg, #2E9AFF, #FFD829);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:#d6b210;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 15px 15px 55px;
+    user-select: none;
+    cursor:pointer;
+    min-height: 20px;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(icons/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 15px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(icons/checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 13px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+.alert {
+    display: none;
+    top: -10%;
+    left: 44%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    background: linear-gradient(25deg, #FFD829, #2E9AFF);
+    border-radius: 70px;
+    animation: ani 0.1s forwards;
+    cursor: pointer;
+}
+
+@keyframes ani {
+    0% {transform: translateX(0);}
+  100% {transform: translateY(130%);}
+}
+.alert h2 {
+    color: #fff;
+    font-size: 17px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.pan {
+    margin-right: 40px;
+}
+.remove {
+    margin-left: 1px;
+}

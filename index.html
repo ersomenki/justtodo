@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just ToDo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="todo">
+            <h2>Just ToDo</h2>
+            <div class="input-row">
+                <input type="text" class="input" placeholder="Добавь задачу">
+                <button onclick="addTask()" >Добавить!</button>
+            </div>
+            <ul class="list">
+                <!-- <li class="checked">task 1</li>
+                <li>task 2</li>
+                <li>task 3</li> -->
+            </ul>
+        </div>
+        <div class="alert">
+            <h2>Нельзя бездельничать!</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
