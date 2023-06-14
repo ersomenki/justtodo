@@ -88,14 +88,24 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 }
                 
             })
+            
+            const checkDotEl = document.createElement('div');
+            checkDotEl.classList.add('checkbox');
+            checkDotEl.innerText = '\u25cb';
 
-            let item = document.querySelector('text');
+            taskContentEl.appendChild(checkDotEl);
 
-            item.addEventListener('click', ()=> {
-                item.classList.add('checked');
+            taskContentEl.addEventListener('click', (e)=> {
+                if(e.target.className == 'text' || e.target.className == 'checkbox') {
+                    checkDotEl.innerText = "\u25cf";
+                    checkDotEl.classList.add('checkyes');
+                    taskInputEl.classList.add('checked');
+                } else {
+                    checkDotEl.classList.remove('checkyes');
+                    checkDotEl.innerText = "\u25cb";
+                    taskInputEl.classList.remove('checked');
+                }
             })
-
-            saveData()
         }
 
         document.addEventListener('click', (e)=>{
@@ -104,14 +114,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             }
         })
 
-        function saveData(){
-            localStorage.setItem("data", taskList.innerHTML);
-        };
         
-        function showTask(){
-            taskList.innerHTML = localStorage.getItem("data");
-        }
-        showTask();
         
     });
 })
