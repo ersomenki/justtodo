@@ -7,7 +7,7 @@
 .container {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(0.25turn, #2E9AFF, #FFD829);
 }
 
@@ -164,7 +164,7 @@ button {
 }
 
 .checkbox {
-    font-size: 35px;
+    font-size: 30px;
     color: #555;
     cursor: pointer;
 }
@@ -176,5 +176,53 @@ button {
 }
 
 .checkyes {
-    color: #fdd829;
+    color: #FFD829;
+}
+
+@media (max-width:320px) {
+    .container {
+        width: 320px;
+    }
+
+    .todo {
+        width: 310px;
+    }
+
+    .content {
+        width: 300px;
+        height: 40px;
+    }
+    .tasks .task {
+        width: 270px;
+        height: 40px;
+        flex-direction: column;
+    }
+
+    .actions {
+        padding-left: 90px;
+    }
+    
+    .add {
+        width: 110px;
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+
+    .input {
+        width: 280px;
+        font-size: 14px;
+    }
+
+    .input-row {
+        width: 290px;
+    }
+
+    .checkbox {
+        font-size: 25px;
+    }
+
+    .alert {
+        top: -9%;
+        left: 26.5%;
+    }
 }
