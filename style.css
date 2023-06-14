@@ -226,3 +226,97 @@ button {
         left: 26.5%;
     }
 }
+
+@media (max-width:375px) {
+    .container {
+        width: 375px;
+    }
+
+    .todo {
+        width: 370px;
+    }
+
+    .content {
+        width: 260px;
+        height: 40px;
+    }
+    .tasks .task {
+        width: 270px;
+        height: 40px;
+    }
+
+    .actions {
+        display: flex;
+    }
+    
+    .add {
+        width: 110px;
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .input {
+        width: 280px;
+        font-size: 14px;
+    }
+
+    .input-row {
+        width: 350px;
+    }
+
+    .checkbox {
+        font-size: 25px;
+    }
+
+    .alert {
+        top: -9%;
+        left: 30.5%;
+    }
+}
+
+@media (max-width:425px) {
+    .container {
+        width: 425px;
+    }
+
+    .todo {
+        width: 370px;
+    }
+
+    .content {
+        width: 260px;
+        height: 40px;
+    }
+    .tasks .task {
+        width: 270px;
+        height: 40px;
+    }
+
+    .actions {
+        display: flex;
+    }
+    
+    .add {
+        width: 110px;
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+
+    .input {
+        width: 280px;
+        font-size: 14px;
+    }
+
+    .input-row {
+        width: 350px;
+    }
+
+    .checkbox {
+        font-size: 25px;
+    }
+
+    .alert {
+        top: -9%;
+        left: 33.5%;
+    }
+}
